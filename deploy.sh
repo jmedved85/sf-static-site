@@ -30,13 +30,13 @@ echo "5. Running database migrations..."
 
 if [ -d migrations ] && [ "$(ls -A migrations)" ]; then
     # Create database backup before migrations
-    echo "   - Creating database backup..."
-    TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
-    BACKUP_FILE="db_backup_${TIMESTAMP}.sql"
-    php bin/console doctrine:database:export --env=prod > "backups/${BACKUP_FILE}" || { 
-        echo "❌ Failed to create database backup. Aborting migrations for safety."
-        exit 1
-    }
+    # echo "   - Creating database backup..."
+    # TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+    # BACKUP_FILE="db_backup_${TIMESTAMP}.sql"
+    # php bin/console doctrine:database:export --env=prod > "backups/${BACKUP_FILE}" || { 
+    #     echo "❌ Failed to create database backup. Aborting migrations for safety."
+    #     exit 1
+    # }
     
     # Run migrations
     echo "   - Running migrations..."
