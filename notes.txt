@@ -11,8 +11,8 @@ sudo apt install symfony-cli
 symfony check:requirements
 
 - traditional web app
-symfony new sf-static-site --webapp
-symfony new sf-static-site --version=lts --webapp
+symfony new sf_static_site --webapp
+symfony new sf_static_site --version=lts --webapp
 
 - microservice, console application or API:
 symfony new my_project_directory
@@ -136,7 +136,7 @@ sudo chmod -R 777 uploads
 ----------
 .env.local
 ----------
-DATABASE_URL=mysql://root:pass1234@mysql-sf-static-site:3306/sf-static-site_dev
+DATABASE_URL=mysql://root:pass1234@mysql-sf_static_site:3306/sf_static_site_dev
 APP_ENV=dev
 APP_DEBUG=true
 
@@ -257,7 +257,7 @@ git config user.name 'Jasmin Medved'
 git config user.email 'jmedved85@gmail.com'
 
 # 2. Add the remote repository
-git remote add origin git@github.com:jmedved85/sf-static-site.git
+git remote add origin git@github.com:jmedved85/sf_static_site.git
 
 # 3. Fetch the remote repository contents
 git fetch
